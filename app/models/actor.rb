@@ -13,6 +13,7 @@ class Actor < ActiveRecord::Base
     end
     character_array.each do |c|
       "#{c.name} - #{c.show.name}"
+    end
   end
   
   
