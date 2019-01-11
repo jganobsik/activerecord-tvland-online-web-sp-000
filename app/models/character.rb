@@ -1,6 +1,6 @@
 class Character < ActiveRecord::Base
-  has_one :actors 
-  has_one :shows
+  belongs_to :actors 
+  belongs_to :shows
   
   def self.actor=(actor) 
     actor_instance = Actors.find_or_create_by(name: actor.to_s)
